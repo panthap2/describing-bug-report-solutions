@@ -74,7 +74,7 @@ python3 jointly_trained_model.py --processed_data_dir=[PROCESSED_DATA_DIR] --mod
 
 **Supplementary Data**
 
-We have provided additional data in the `supplementary_data` directory. In our work, we only consider in-lined code snippets and exclude longer code snippets which are marked with markdown tags. However, this information is included in the raw data at `supplementary_data/bugs/single_code_change` (see the `anonymized_raw_text` field). Next, although we only consider bug-related issue reports and those associated with a single commit message/PR title, we have included the raw data for non-bug reports (`supplementary_data/non_bugs/`) and multiple set of code changes/descriptions (`supplementary_data/bugs/multi_code_change` and `supplementary_data/non_bugs/multi_code_change`). 
+We have provided additional data in the `supplementary_data` directory. In our work, we only consider in-lined code snippets and exclude longer code snippets which are marked with markdown tags. However, this information is included in the raw data at `supplementary_data/bugs/single_code_change` (see the `anonymized_raw_text` field). Next, although we only consider bug-related issue reports and those associated with a single commit message/PR title, we have included the raw data for non-bug reports (`supplementary_data/nonbugs/`) and multiple set of code changes/descriptions (`supplementary_data/bugs/multi_code_change` and `supplementary_data/nonbugs/multi_code_change`). 
 
 If you find this work useful, please consider citing our paper:
 
