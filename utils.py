@@ -35,6 +35,9 @@ PATIENCE = 5
 BEAM_SIZE = 2 #5
 NUM_LAYERS = 2
 
+SOURCE = 'source'
+TARGET = 'target'
+
 class IssueData:
     def __init__(self, id, issue_url, title, code_change_url, solution_description, 
                  report, pre_utterances, post_utterances, start_date_str, end_date_str,
