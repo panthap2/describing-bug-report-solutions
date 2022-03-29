@@ -55,19 +55,19 @@ python3 pipelined_model.py --class_model_dir=finetuned_plbart_classification/ --
 2. To instead finetune the original PLBART checkpoint, you should first finetune a generation model using Step #2 in the section titled "Running PLBART Generation Model." You can then train the classifier and run inference using the following commands:
 ```
 cd combined_systems/
-python3 pipelined_model.py --class_model_dir=[MODEL_DIR] --gen_model_dir=[PATH TO SAVED GENERATION MODEL] --output_dir=[OUTPUT_DIR] --processed_data_dir=--processed_data_dir=[PROCESSED_DATA_DIR]
-python3 pipelined_model.py --class_model_dir=[MODEL_DIR] --gen_model_dir=[PATH TO SAVED GENERATION MODEL] --output_dir=[OUTPUT_DIR] --processed_data_dir=--processed_data_dir=[PROCESSED_DATA_DIR] --test_mode
+python3 pipelined_model.py --processed_data_dir=--processed_data_dir=[PROCESSED_DATA_DIR] --class_model_dir=[MODEL_DIR] --gen_model_dir=[PATH TO SAVED GENERATION MODEL]
+python3 pipelined_model.py --processed_data_dir=--processed_data_dir=[PROCESSED_DATA_DIR] --class_model_dir=[MODEL_DIR] --gen_model_dir=[PATH TO SAVED GENERATION MODEL] --output_dir=[OUTPUT_DIR] --test_mode
 ```
 
 **Running Jointly Trained Combined System**
 1. To run inference on the already finetuned system, run the following command:
 ```
 cd combined_systems/
-python3 jointly_trained_model.py --model_dir=finetuned_plbart_joint/ --output_dir=[OUTPUT_DIR] --processed_data_dir=[PROCESSED_DATA_DIR]
+python3 jointly_trained_model.py --processed_data_dir=[PROCESSED_DATA_DIR] --model_dir=finetuned_plbart_joint/ --output_dir=[OUTPUT_DIR]
 ```
 2. To instead finetune the original PLBART checkpoint and run inference, use the following commands:
 ```
 cd combined_systems/
-python3 jointly_trained_model.py --model_dir=[MODEL_DIR] --output_dir=[OUTPUT_DIR] --processed_data_dir=[PROCESSED_DATA_DIR]
-python3 jointly_trained_model.py --model_dir=[MODEL_DIR] --output_dir=[OUTPUT_DIR] --processed_data_dir=[PROCESSED_DATA_DIR] --test_mode
+python3 jointly_trained_model.py --processed_data_dir=[PROCESSED_DATA_DIR] --model_dir=[MODEL_DIR]
+python3 jointly_trained_model.py --processed_data_dir=[PROCESSED_DATA_DIR] --model_dir=[MODEL_DIR] --output_dir=[OUTPUT_DIR] --test_mode
 ```
