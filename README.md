@@ -79,7 +79,7 @@ We have provided additional data in the `supplementary_data` directory. In our w
 If you find this work useful, please consider citing our paper:
 
 ```
-@inproceedings{PanthaplackelETAL20CommentUpdate,
+@inproceedings{PanthaplackelETAL22BugReportDescription,
   author = {Panthaplackel, Sheena and Li, Junyi Jessy and Gligoric, Milos and Mooney, Raymond J.},
   title = {Learning to Describe Solutions for Bug Reports Based on Developer Discussions},
   booktitle = {Findings of ACL (Association for Computational Linguistics)},
