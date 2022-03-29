@@ -11,7 +11,7 @@ Note that the code and data can only be used for research purposes. Running this
 3. Install [sentencepiece](https://github.com/google/sentencepiece) and specify the path to `spm_encode` as `SPM_PATH` in `constants.py`.
 4. Download `sentencepiece.bpe.model` and `dict.txt` from [here](https://github.com/wasiahmad/PLBART/tree/main/sentencepiece) and specify the paths for `SENTENCE_PIECE_MODEL_PATH` and `PLBART_DICT` respectively in `constants.py`.
 5. Follow directions [here](https://github.com/wasiahmad/PLBART/blob/main/pretrain/download.sh) to download plbart-base.pt and specify the path for `PLBART_CHECKPOINT` in `constants.py`.
-6. Download our dataset and saved models from [here](https://drive.google.com/drive/folders/1pirq1EF7UnXpq33Cir3_Sz3l8jv_2kTB?usp=sharing). 
+6. Download our dataset and saved models from [here](https://drive.google.com/drive/folders/1pirq1EF7UnXpq33Cir3_Sz3l8jv_2kTB?usp=sharing). Note that the primary dataset is located in `public_bug_report_data`.
 7. Create a directory for writing processed data, which will be referred to as ``[PROCESSED_DATA_DIR]`` in later steps.
 8. Create a directory for writing predicted output, which will be referred to as ``[OUTPUT_DIR]`` in later steps.
 9. Create a directory for writing a new model, which will be referred to as ``[MODEL_DIR]`` in later steps.
@@ -70,4 +70,20 @@ python3 jointly_trained_model.py --processed_data_dir=[PROCESSED_DATA_DIR] --mod
 cd combined_systems/
 python3 jointly_trained_model.py --processed_data_dir=[PROCESSED_DATA_DIR] --model_dir=[MODEL_DIR]
 python3 jointly_trained_model.py --processed_data_dir=[PROCESSED_DATA_DIR] --model_dir=[MODEL_DIR] --output_dir=[OUTPUT_DIR] --test_mode
+```
+
+**Supplementary Data**
+
+We have provided additional data in the `supplementary_data` directory. In our work, we only consider in-lined code snippets and exclude longer code snippets which are marked with markdown tags. However, this information is included in the raw data at `supplementary_data/bugs/single_code_change` (see the `anonymized_raw_text` field). Next, although we only consider bug-related issue reports and those associated with a single commit message/PR title, we have included the raw data for non-bug reports (`supplementary_data/non_bugs/`) and multiple set of code changes/descriptions (`supplementary_data/bugs/multi_code_change` and `supplementary_data/non_bugs/multi_code_change`). 
+
+If you find this work useful, please consider citing our paper:
+
+```
+@inproceedings{PanthaplackelETAL20CommentUpdate,
+  author = {Panthaplackel, Sheena and Li, Junyi Jessy and Gligoric, Milos and Mooney, Raymond J.},
+  title = {Learning to Describe Solutions for Bug Reports Based on Developer Discussions },
+  booktitle = {Association for Computational Linguistics},
+  pages = {To Appear},
+  year = {2022},
+}
 ```
