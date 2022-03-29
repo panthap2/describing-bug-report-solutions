@@ -1,10 +1,11 @@
 import os
 
-FILTERED_DATA_PATH = '/scratch/cluster/spantha/public_bug_report_data/filtered'
-FULL_DATA_PATH = '/scratch/cluster/spantha/public_bug_report_data/full'
+ROOT_DIR = '' # TODO: Absolute path to the describing-bug-report-solutions directory
+SPM_PATH = 'spm_encode' # TODO: Path to the sentencepiece encoder
+SENTENCE_PIECE_MODEL_PATH = 'sentencepiece.bpe.model' # TODO: Path to sentencepiece.bpe.model from here: https://github.com/wasiahmad/PLBART/tree/main/sentencepiece
+PLBART_DICT = 'dict.txt' # TODO: Path to dict.txt from here: https://github.com/wasiahmad/PLBART/tree/main/sentencepiece
+PLBART_CHECKPOINT = 'plbart-base.pt' # TODO: Path to plbart-base.pt from here: 
 
-PLBART_PATH = '/scratch/cluster/spantha/PLBART-BASE/PLBART-BASE/'
-SENTENCE_PIECE_MODEL_PATH = os.path.join(PLBART_PATH, 'tokenizer/sentencepiece.bpe.model')
-PLBART_DICT = os.path.join(PLBART_PATH, 'dict.txt')
-PLBART_CHECKPOINT = os.path.join(PLBART_PATH, 'plbart-base.pt')
-SPM_PATH = '/scratch/cluster/spantha/sentencepiece/build/src/spm_encode'
+FILTERED_DATA_PATH = os.path.join(ROOT_DIR, 'public_bug_report_data/filtered')
+FULL_DATA_PATH = os.path.join(ROOT_DIR, 'public_bug_report_data/full')
+LABEL_DICT = os.path.join(ROOT_DIR, 'combined_systems', 'label_dict.txt')
