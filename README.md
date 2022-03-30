@@ -2,6 +2,18 @@
 
 **Code and datasets for our paper "Learning to Describe Solutions for Bug Reports Based on Developer Discussions" at Findings of ACL 2022**.
 
+If you find this work useful, please consider citing our paper:
+
+```
+@inproceedings{PanthaplackelETAL22BugReportDescription,
+  author = {Panthaplackel, Sheena and Li, Junyi Jessy and Gligoric, Milos and Mooney, Raymond J.},
+  title = {Learning to Describe Solutions for Bug Reports Based on Developer Discussions},
+  booktitle = {Findings of ACL (Association for Computational Linguistics)},
+  pages = {To Appear},
+  year = {2022},
+}
+```
+
 Note that the code and data can only be used for research purposes. Running this code requires `torch==1.4.0+cu92` and `fairseq==0.10.2`. Other libraries may need to be installed as well. This code base borrows code from the [PLBART](https://github.com/wasiahmad/PLBART) and [Fairseq](https://github.com/pytorch/fairseq) repositories.
 
 
@@ -75,15 +87,3 @@ python3 jointly_trained_model.py --processed_data_dir=[PROCESSED_DATA_DIR] --mod
 **Supplementary Data**
 
 We have provided additional data in the `supplementary_data` directory. In our work, we only consider in-lined code snippets and exclude longer code snippets which are marked with markdown tags. However, this information is included in the raw data at `supplementary_data/bugs/single_code_change` (see the `anonymized_raw_text` field). Next, although we only consider bug-related issue reports and those associated with a single commit message/PR title, we have included the raw data for non-bug reports (`supplementary_data/nonbugs/`) and multiple set of code changes/descriptions (`supplementary_data/bugs/multi_code_change` and `supplementary_data/nonbugs/multi_code_change`). 
-
-If you find this work useful, please consider citing our paper:
-
-```
-@inproceedings{PanthaplackelETAL22BugReportDescription,
-  author = {Panthaplackel, Sheena and Li, Junyi Jessy and Gligoric, Milos and Mooney, Raymond J.},
-  title = {Learning to Describe Solutions for Bug Reports Based on Developer Discussions},
-  booktitle = {Findings of ACL (Association for Computational Linguistics)},
-  pages = {To Appear},
-  year = {2022},
-}
-```
