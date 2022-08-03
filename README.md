@@ -9,7 +9,7 @@ If you find this work useful, please consider citing our paper:
   author = {Panthaplackel, Sheena and Li, Junyi Jessy and Gligoric, Milos and Mooney, Raymond J.},
   title = {Learning to Describe Solutions for Bug Reports Based on Developer Discussions},
   booktitle = {Findings of ACL (Association for Computational Linguistics)},
-  pages = {To Appear},
+  pages = {2935--2952},
   year = {2022},
 }
 ```
